@@ -10900,7 +10900,7 @@ html,body{width: 100vw; }
     }
 
     .image {
-      /* display: none; */
+      display: none;
       max-width: 500px;
     }
 }
