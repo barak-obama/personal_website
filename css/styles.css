@@ -10841,6 +10841,7 @@ html {
 section.masthead {
   /* position: relative; */
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
@@ -10889,6 +10890,7 @@ html,body{width: 100vw; }
 
 .section{
   height: 100vh;
+  height: 100dvh;
   position: relative;
 }
 
@@ -10919,6 +10921,7 @@ html,body{width: 100vw; }
 .header {
     /* position: relative; */
     height: 100vh;
+    height: 100dvh;
     /* overflow: hidden; */
     padding-top: calc(7rem + 72px);
     padding-bottom: 7rem;
