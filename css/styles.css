@@ -10903,6 +10903,16 @@ html,body{width: 100vw; }
       display: none;
       max-width: 500px;
     }
+
+
+}
+
+@media (min-width: 600px) {
+  .content {
+    display: flex;
+    align-items: center;
+  
+  }
 }
 
 .header {
@@ -10928,16 +10938,16 @@ html,body{width: 100vw; }
 
 .scroll_point  {
   scroll-snap-align: start;
-} 
-
-.content {
-  display: flex;
-  align-items: center;
-
 }
+
+
 
 .list li{
   margin: 10px 0;
+}
+
+.second_item {
+  padding-top: 0.5rem !important;
 }
 
 /* .content .container {
