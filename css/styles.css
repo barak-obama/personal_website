@@ -10938,6 +10938,7 @@ html,body{width: 100vw; }
   height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  overflow-x: hidden;
 }
 
 .scroll_point  {
