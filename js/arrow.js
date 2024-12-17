@@ -7,15 +7,24 @@ let arrows = {
     6:1
 }
 
-setTimeout(() => {
+function define_arrows(){
+    setTimeout(() => {
 
-    Object.keys(arrows).forEach(arrow => {
-        let section = arrows[arrow];
-        console.log("arrow",arrow, "section", section )
-        $("#arrow"+arrow).click(function(){
-            
-            $("#section" + section).get(0).scrollIntoView({behavior: 'smooth'});
-        })
-    });
+        // Object.keys(arrows).forEach(arrow => {
+        //     let target = arrows[arrow];
+        //     console.log("arrow",arrow, "section", target )
+        //     $("#arrow"+arrow).on("click", function(){
+        //         $("[arrow_target_id='"+target+"']").get(0).scrollIntoView({behavior: 'smooth'});
+        //     });
+        // });
 
-}, 100);
+
+        $.each($("[arrow_target]"), (i,arrow) => {
+            let target_id = $(arrow).attr("arrow_target");
+            $(arrow).on("click", function(){
+                $("[arrow_target_id='"+target_id+"']").get(0).scrollIntoView({behavior: 'smooth'});
+            });
+        });
+    
+    }, 100);
+}

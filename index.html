@@ -18,106 +18,13 @@
 <body id="page-top">
     <article class="scroll_wrapper">
 
-        <section id="section1" class="scroll_point section header masthead text-center text-white">
-            <div class="masthead-content">
-                <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">Barak Ohana</h1>
-                </div>
-            </div>
-            <i class="fa fa-angle-down arrow down_arrow" id="arrow1"></i>
+        <span w3-include-html="sections/header.html"></span>
 
-        </section>
+        <span w3-include-html="sections/about_me.html"></span>
 
-        <section id="section2" class="section scroll_point content" id="scroll" >
-            <div class="container px-5">
-                
-                <div class="row gx-5 align-items-center">
+        <span w3-include-html="sections/articles.html"></span>
 
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <h2 class="display-4">About Me</h2>
-                            <p>
-                                I am a PhD student in the Hebrew University of Jerusalem supervised by <a href="http://www.ma.huji.ac.il/~zlil/" > Prof. Zlil Sela   </a> and <a href="https://math.huji.ac.il/~perin/"> Prof. Chloe Perin</a>.
-                            </p>
-                            <p> Prior to that I did my master's in the Hebrew University under the supervision of Prof. Chloe Perin. </p>
-                            <p> 
-                                My mathematical fields of interest include geometric group theory, more specifitly I am intrested in heirarcally hyperbolic groups (and more specificly mapping class groups). 
-                            </p>
-                                
-                            <p><b>Contact:</b> barak.ohana (at) mail.huji.ac.il</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 image">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt="..." /></div>
-                    </div>
-                </div>
-            </div>
-            <i class="fa fa-angle-down arrow down_arrow black_arrow" id="arrow2"></i>
-            <i class="fa fa-angle-up arrow up_arrow black_arrow" id="arrow6"></i>
-        </section>
-
-        <section id="section3" class="section scroll_point content" >
-            <div class="container px-5">
-                
-                <div class="row gx-5 align-items-center">
-
-                    <div class="col-lg-5 image">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt="..." /></div>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <h2 class="display-4">Preprint & Projects</h2>
-
-                            <ul class="list">
-                                <li>On Equational Noetherianity of Colorable Hierarchically Hyperbolic Groups <a href="https://arxiv.org/abs/2410.00977">arXiv:2410.00977</a></li>
-                                <li>In work: Algebraic Closure in Free Groups with Imaginaries (revision needed, master thesis) <a href="https://drive.google.com/file/d/1UEOrmEj8P20EkPJzI7gchQWq4i5Frgrd/view?usp=sharing">draft</a></li>
-                              </ul>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            <i class="fa fa-angle-down arrow down_arrow black_arrow" id="arrow3"></i>
-            <i class="fa fa-angle-up arrow up_arrow black_arrow" id="arrow5"></i>
-        </section>
-
-        <section id="section4" class="section scroll_point content" >
-            <div class="container px-5">
-                
-                <div class="row gx-5 align-items-center">
-
-                    
-
-                    <div class="col-lg-7">
-                        <div class="p-5">
-                            <h2 class="display-4">Reaserch Talks</h2>
-
-                            <ul class="list">
-                                <li>Equation over Hierarchically Hyperbolic Groups, Groups and Dynamics Seminar, The Hebrew University, December 2024. </li>
-                                <li>JSJ Theory and its usage in Model Theory, Séminaire de théorie ergodique, Institut de recherche mathématique de Rennes, May 2022</li>
-                              </ul>
-                        </div>
-
-                        <div class="p-5 second_item">
-                            <h2 class="display-4">Prizes and Honors  </h2>
-
-                            <ul class="list">
-                                <li> Recipient of the Dr. Moris Tenenbaum Award, 2021 </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 image">
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/03.jpg" alt="..." /></div>
-                    </div>
-                    
-                </div>
-            </div>
-            <i class="fa fa-angle-up arrow up_arrow black_arrow" id="arrow4"></i>
-        </section>
+        <span w3-include-html="sections/talks_and_prizes.html"></span>
     </article>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -125,5 +32,9 @@
         <script src="js/scripts.js"></script>
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/arrow.js"></script>
+        <script src="js/include.js"></script>
+        <script>
+            includeHTML().then(define_arrows);
+        </script>
 </body>
 </html>
