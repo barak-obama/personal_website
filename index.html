@@ -34,7 +34,14 @@
         <script src="js/arrow.js"></script>
         <script src="js/include.js"></script>
         <script>
-            includeHTML().then(define_arrows);
+            if ('scrollRestoration' in history) {
+              history.scrollRestoration = 'manual';
+            }
+            window.scrollTo(0, 0);
+            includeHTML().then(() => {
+              define_arrows();
+              window.scrollTo(0, 0);
+            });
         </script>
 </body>
 </html>
