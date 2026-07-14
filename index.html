@@ -18,13 +18,10 @@
 <body id="page-top">
     <article class="scroll_wrapper">
 
-        <span w3-include-html="sections/header.html"></span>
-
-        <span w3-include-html="sections/about_me.html"></span>
-
-        <span w3-include-html="sections/articles.html"></span>
-
-        <span w3-include-html="sections/talks_and_prizes.html"></span>
+        {% include_relative sections/header.html %}
+        {% include_relative sections/about_me.html %}
+        {% include_relative sections/articles.html %}
+        {% include_relative sections/talks_and_prizes.html %}
     </article>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -34,14 +31,16 @@
         <script src="js/arrow.js"></script>
         <script src="js/include.js"></script>
         <script>
-            if ('scrollRestoration' in history) {
-              history.scrollRestoration = 'manual';
-            }
-            window.scrollTo(0, 0);
-            includeHTML().then(() => {
-              define_arrows();
-              window.scrollTo(0, 0);
-            });
+            // if ('scrollRestoration' in history) {
+            //   history.scrollRestoration = 'manual';
+            // }
+            // window.scrollTo(0, 0);
+            // includeHTML().then(() => {
+            //   define_arrows();
+            //   window.scrollTo(0, 0);
+            // });
+
+            define_arrows();
         </script>
 </body>
 </html>
