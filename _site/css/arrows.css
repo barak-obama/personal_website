@@ -1,0 +1,42 @@
+.arrow {
+  white-space: nowrap;
+  font-size: 3rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+
+}
+
+.down_arrow {
+  bottom: 0px;
+  animation: BottomMoveUpDown 1s linear infinite;
+}
+
+.up_arrow{
+  top: 0px;
+  animation: TopMoveUpDown 1s linear infinite;
+}
+
+.black_arrow {
+  color: black;
+}
+
+@keyframes BottomMoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+@keyframes TopMoveUpDown {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+}
