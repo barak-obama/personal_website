@@ -15,6 +15,7 @@
 
   .image {
     /* padding: 0; */
+    visibility: hidden;
   }
   .image .p-5 {
     /* padding: 0 !important; */
@@ -31,7 +32,7 @@
 .col-lg-7 .grey_background::before {
   content: "";
   position: absolute;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   z-index: -1; /* Drops it behind the text */
   
   /* Matches the exact size of the .p-5 wrapper */
