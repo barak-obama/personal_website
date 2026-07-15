@@ -1,0 +1,93 @@
+@media (max-width: 915px) { /* Targets mobile screens (Bootstrap's sm breakpoint) */
+  .row {
+    position: relative;
+    height: 100%;
+  }
+
+  .row > * {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .row > .image {
+    z-index: -1;
+  }
+
+  .image {
+    /* padding: 0; */
+  }
+  .image .p-5 {
+    /* padding: 0 !important; */
+  }
+
+  .col-lg-7 .grey_background {
+
+        opacity: 0.9;
+        border-radius: 10px;
+          position: relative; /* Anchors the absolute pseudo-element */
+  z-index: 1; /* Creates a stacking context */
+  }
+
+.col-lg-7 .grey_background::before {
+  content: "";
+  position: absolute;
+  background-color: whitesmoke;
+  z-index: -1; /* Drops it behind the text */
+  
+  /* Matches the exact size of the .p-5 wrapper */
+  inset: 0; 
+  
+  /* Scales the background relative to the center without affecting layout. 
+     1.1 makes it 10% larger, 0.9 makes it 10% smaller. */
+  transform: scale(1.2);
+  left: 4%;
+  right: 4%;
+  
+  /* You can even add your blob border-radius here */
+  border-radius: 10%
+}
+
+  /* text before image */
+
+            .col-lg-7:has(+ .image) {
+            /* background-color: green; */
+            top: 0;
+            }
+
+            .col-lg-7 + .image {
+                bottom: -2rem;
+                img {
+                    border-radius: 51% 49% 25% 75% / 44% 73% 27% 56% !important;
+                }
+            }
+
+
+
+  /*text after image */
+
+
+            .image + .col-lg-7 {
+                /* background-color: red; */
+                bottom: 5%;
+            }
+
+            .image:has(+ .col-lg-7) {
+                top: 0;
+                img {
+                    border-radius: 69% 31% 45% 55% / 74% 39% 61% 26% !important;
+                }
+            }
+
+
+
+
+.section{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.container {
+    overflow: hidden;
+    height: 100%;
+}
+
+}
