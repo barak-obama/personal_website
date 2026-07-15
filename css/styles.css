@@ -10903,6 +10903,7 @@ html,body{width: 100vw; }
   height: 100vh;
   height: 100dvh;
   position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 600px)
@@ -10914,10 +10915,8 @@ html,body{width: 100vw; }
     }
 
     .image {
-      display: none;
-      max-width: 500px;
+      max-width: 100%;
     }
-
 
 }
 
@@ -10952,24 +10951,11 @@ html,body{width: 100vw; }
   overflow-x: hidden;
 }
 
-.scroll_point  {
+.scroll_point {
   scroll-snap-align: start;
 }
 
-
-
-.list li{
-  margin: 10px 0;
-}
-
-.second_item {
-  padding-top: 0.5rem !important;
-}
-
-
 .arrow {
-  white-space: nowrap;
-  font-size: 3rem;
   position: absolute;
   right: 0;
   left: 0;
@@ -11010,9 +10996,42 @@ html,body{width: 100vw; }
   }
 }
 
+/* ===== Responsive photo sizing (added) ===== */
 
+.image img.rounded-circle,
+.image img.img-fluid {
+  width: clamp(150px, 32vh, 340px) !important;
+  height: clamp(150px, 32vh, 340px) !important;
+  max-width: 90% !important;
+  object-fit: cover;
+}
 
+@media (min-width: 992px) {
+  .image img.rounded-circle,
+  .image img.img-fluid {
+    width: clamp(220px, 55vh, 600px) !important;
+    height: clamp(220px, 55vh, 600px) !important;
+  }
+}
 
+.content h1, .content h2 {
+  font-size: clamp(1.8rem, 4vh, 3rem) !important;
+}
+
+.content .p-5 {
+  padding: clamp(1rem, 4vh, 3rem) !important;
+}
+
+/* Mobile/tablet-only framed "polaroid" card look (circle stays untouched above 991px) */
+@media (max-width: 991px) {
+  .image img.rounded-circle,
+  .image img.img-fluid {
+    border-radius: 10px !important;
+    border: 8px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: rotate(-2deg);
+  }
+}
 
 /* .content .container {
   display:table-cell;
